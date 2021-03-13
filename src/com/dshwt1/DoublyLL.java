@@ -5,6 +5,7 @@ import java.util.Iterator;
 public class DoublyLL<Item> implements Iterable<Item> {
 
     Node<Item> head;
+    Node<Item> tail;
     int size=0;
 
 
@@ -35,6 +36,25 @@ public class DoublyLL<Item> implements Iterable<Item> {
             current.next=newNode;
         }
         size++;
+    }
+    public void addAfter(Node<Item> oldNode,Item item){
+        Node<Item> newNode = new Node<Item>();
+        newNode.data=item;
+
+        newNode.next=oldNode.next;
+        oldNode.next=newNode;
+        newNode.prev=oldNode;
+        if(newNode.next!=null){
+            newNode.next.prev=newNode;
+        }
+    }
+
+    public void addBefore(Node<Item> oldNode, Item item){
+    Node<Item> newNode = new Node<Item>();
+    newNode.data=item;
+        if(newNode.prev == null){
+
+        }
     }
 
 
