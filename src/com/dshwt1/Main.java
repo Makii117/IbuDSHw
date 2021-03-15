@@ -15,13 +15,18 @@ public class Main {
 		System.out.println("---------");
 	list.removeFromRear();
 	list.addToFront(7);
+
+		for(int i: list){
+			System.out.println(i);
+		}
+		System.out.println("---------");
+    list.removeFromFront();
+	list.addToRear(6);
 		for(int i: list){
 			System.out.println(i);
 		}
 
-    list.removeFromFront();
-	list.addToRear(6);
-    }
+	}
 
 
 }
